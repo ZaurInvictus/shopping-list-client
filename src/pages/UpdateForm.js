@@ -39,7 +39,7 @@ const UpdateForm = (props) => {
           <div className="modal__inner-header">
             <div className="modal__inner-header-title">SHOPPING LIST</div>
             <div className="modal__inner-header-close">
-              <span className="material-icons-outlined" id="modalClose">
+              <span className="material-icons-outlined">
                 last_page
               </span>
             </div>

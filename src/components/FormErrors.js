@@ -6,9 +6,8 @@ import { MdError } from "react-icons/md";
 const FormError = styled.div`
   color: red;
   font-size: 0.9rem;
-  line-height: 1.5rem;
   text-align: start;
-  margin-top: -10px;
+  margin-top: -12px;
 `;
 
 const I = styled.span`
