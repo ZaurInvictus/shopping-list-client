@@ -8,7 +8,7 @@ const FormError = styled.div`
   font-size: 0.9rem;
   line-height: 1.5rem;
   text-align: start;
-  margin-top: 10px;
+  margin-top: -10px;
 `;
 
 const I = styled.span`

@@ -21,9 +21,10 @@ const AddItem = ({ addItem }) => {
   const [formErrors, setFormErrors] = useState({
     nameError: "",
     descriptionError: "",
+    countError: ""
   });
 
-  const { nameError, descriptionError } = formErrors;
+  const { nameError, descriptionError, countError } = formErrors;
   const { name, description, count } = formData;
 
   const changeHandler = (e) => {
@@ -94,6 +95,7 @@ const AddItem = ({ addItem }) => {
               </div>
             </div>
             <div className="input__outer">
+            <FormErrors message={countError} />
               <select
                 name="count"
                 className="input--text"

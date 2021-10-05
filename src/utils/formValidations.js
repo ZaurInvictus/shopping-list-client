@@ -1,6 +1,7 @@
 export default function formValidations (formData, setFormErrors) {
     let nameError = ''
     let descriptionError = ''
+    let countError = ''
 
 
     if (formData.name.match(/[^a-zA-Z_ ]/g) // should not contain special characters or numbers.
@@ -20,11 +21,14 @@ export default function formValidations (formData, setFormErrors) {
     if (!formData.description) { // cannon be blank
       descriptionError = "Must enter a description"
     }
+    if (!formData.count) { // cannon be blank
+      countError = "Must enter a description"
+    }
 
 
     // Setting errors to the state
-    if (nameError || descriptionError) {
-      setFormErrors({ nameError, descriptionError })
+    if (nameError || descriptionError || countError) {
+      setFormErrors({ nameError, descriptionError, countError })
       return false
     }
     return true

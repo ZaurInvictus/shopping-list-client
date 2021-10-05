@@ -314,6 +314,13 @@ li {
   padding: 40px;
 }
 
+@media (max-width: 540px) {
+  .confirmation__pop-up {
+    max-width: 340px;
+    padding: 15px;
+  }
+}
+
 .confirmation__pop-up-text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -338,7 +345,7 @@ li {
 }
 
 .delete-text1 {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 20px;
   font-weight: 700;
   color: #000;
@@ -351,7 +358,7 @@ li {
 
 .delete-text2 {
   color: #7c7a7a;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 40px;
   pointer-events: none;
@@ -802,28 +809,6 @@ li {
   left: 30px;
 }
 
-.checked {
-  background: #f8fafb;
-}
-
-.checked:after {
-  opacity: 1;
-}
-
-.checked .input_check {
-  background: #5881b3;
-  border: 2px solid #5881b3;
-}
-
-.checked .litext {
-  color: #5881b3;
-  text-decoration: line-through;
-}
-
-.checked .litext2 {
-  text-decoration: line-through;
-}
-
 .section_empty_state {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -847,9 +832,23 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
+  width: 50%;
+  margin: 0 auto;
   border: 1px solid lightgray;
   padding: 100px;
-  margin: 100px;
+}
+
+@media (max-width: 540px) {
+  .section_empty_state-body {
+    padding: 50px;
+  }
+  .section_empty_state-body .btn {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  .section_empty_state-body h4 {
+    font-size: 16px;
+  }
 }
 
 .btn {
@@ -862,6 +861,7 @@ li {
   background: #3273E0;
   font-family: "Nunito", sans-serif;
   cursor: pointer;
+  margin: 15px 0;
   -webkit-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
