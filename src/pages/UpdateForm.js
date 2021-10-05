@@ -6,9 +6,8 @@ const UpdateForm = (props) => {
   const [value, setValue] = useState(null);
   const history = useHistory();
 
-
   // Textarea characters counter
-  let length = value ? value.length: 0
+  let length = value ? value.length : 0;
 
   const changeHandler = (e) => {
     let name = e.target.name;
@@ -67,7 +66,7 @@ const UpdateForm = (props) => {
                 </div>
                 <div className="input__section">
                   <textarea
-                    className= "input--text"
+                    className="input--text"
                     type="text"
                     maxLength="500"
                     cols="30"
@@ -97,10 +96,7 @@ const UpdateForm = (props) => {
               </div>
 
               <div className="check">
-                <input
-                  type="checkbox"
-                  onClick={toggleIsPurchased}
-                />
+                <input type="checkbox" onClick={toggleIsPurchased} />
                 <label htmlFor="">Purchased</label>
               </div>
             </div>

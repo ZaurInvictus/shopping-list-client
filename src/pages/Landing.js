@@ -16,7 +16,7 @@ const Landing = ({
 }) => {
   // TOGGLE IS COMPLETED
   const toggleIsPurchased = useCallback(
-    (id, e) => {
+    (id) => {
       const newItem = items.filter((item) => item.id === id);
       newItem[0].isPurchased = !newItem[0].isPurchased;
       updateItem(newItem[0]);

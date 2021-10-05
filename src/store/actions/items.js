@@ -66,7 +66,7 @@ export const addItem = (formData) => async dispatch => {
     dispatch(setAlert('Item created', 'success'))
   } catch(err) {
     dispatch({ type: CREATE_ITEM_ERROR })
-    dispatch(setAlert('Error creating item', 'error'))
+    dispatch(setAlert('Error creating item', 'danger'))
   }
 }
 
@@ -102,6 +102,6 @@ export const updateItem = item => async dispatch => {
     dispatch(setAlert('Item data successfully updated', 'success'))
   } catch(err) {
       dispatch({ type: UPDATE_ITEM_ERROR })
-      dispatch(setAlert('Update error', 'error'))
+      dispatch(setAlert('Update error', 'danger'))
   }
 }
