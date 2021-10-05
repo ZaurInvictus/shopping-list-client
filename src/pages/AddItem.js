@@ -80,7 +80,7 @@ const AddItem = ({ addItem }) => {
               <div className="input__section">
                 <FormErrors message={descriptionError} />
                 <textarea
-                  //className={descriptionError ? "input--text error" : "input--text"}
+                  className="input--text"
                   type='text'
                   maxLength="500"
                   cols="30"

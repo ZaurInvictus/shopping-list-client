@@ -17,12 +17,9 @@ const Landing = ({
   // TOGGLE IS COMPLETED
   const toggleIsPurchased = useCallback(
     (id, e) => {
-      // console.log(items);
       const newItem = items.filter((item) => item.id === id);
-      //console.log("before", newItem[0].isPurchased);
       newItem[0].isPurchased = !newItem[0].isPurchased;
       updateItem(newItem[0]);
-      //console.log("after", newItem[0].isPurchased);
     },
     [items, updateItem]
   );

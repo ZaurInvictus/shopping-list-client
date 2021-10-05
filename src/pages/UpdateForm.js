@@ -25,10 +25,8 @@ const UpdateForm = (props) => {
 
   const toggleIsPurchased = () => {
     const newItem = item;
-    //console.log("before upd:", newItem.isPurchased);
     newItem.isPurchased = !newItem.isPurchased;
     props.updateItem(newItem);
-    //console.log("after upd:", newItem.isPurchased);
   };
 
   useEffect(() => {
@@ -54,7 +52,7 @@ const UpdateForm = (props) => {
               </div>
               <div className="input__outer">
                 <input
-                  // className={nameError ? "input--text error" : "input--text"}
+                  className="input--text"
                   type="text"
                   placeholder="Product"
                   name="name"
@@ -69,7 +67,7 @@ const UpdateForm = (props) => {
                 </div>
                 <div className="input__section">
                   <textarea
-                    //className={descriptionError ? "input--text error" : "input--text"}
+                    className= "input--text"
                     type="text"
                     maxLength="500"
                     cols="30"
