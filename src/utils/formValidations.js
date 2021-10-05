@@ -22,7 +22,7 @@ export default function formValidations (formData, setFormErrors) {
       descriptionError = "Must enter a description"
     }
     if (!formData.count) { // cannon be blank
-      countError = "Must enter a description"
+      countError = "Must enter a count"
     }
 
 
