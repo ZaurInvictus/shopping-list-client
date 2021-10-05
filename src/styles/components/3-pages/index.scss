@@ -1,0 +1,181 @@
+.header {
+  background: #5881b3;
+  padding: 30px 50px;
+
+  h1 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 500;
+    color: #fff;
+  }
+}
+
+.section {
+  &__inner {
+    padding: 50px 0;
+
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+
+      h2 {
+        color: #000;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        font-family: $font-secondary;
+      }
+
+      .btn {
+        padding: 8px 15px;
+        font-weight: 400;
+        color: #fff;
+        font-size: 16px;
+        line-height: 20px;
+        border-radius: 5px;
+        background: #3273E0;
+        font-family: $font-secondary;
+        cursor: pointer;
+        @include transition;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    &-body {
+      ul {
+        li {
+          position: relative;
+          padding: 25px 100px 25px 75px;
+          border: 1px solid #ebeff3;
+          border-radius: 10px;
+          font-family: $font-secondary;
+          position: relative;
+          margin-bottom: 20px;
+          cursor: pointer;
+          @include transition;
+
+          
+          
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .litext {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 6px;
+            @include transition;
+            pointer-events: none;
+          }
+
+          .litext2 {
+            color: #7c7a7a;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+            pointer-events: none;
+          }
+
+          span,
+          button,
+          .edit {
+            font-family: $font-icon;
+            @include transition;
+
+            &:hover {
+              opacity: 0.8;
+            }
+
+            &.delete {
+              position: absolute;
+              right: 30px;
+              top: 50%;
+              @include transformY;
+              color: #575f7a;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 30px;
+              height: 30px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              font-size: 24px;
+              cursor: pointer;
+            }
+
+            &.edit {
+              position: absolute;
+              right: 70px;
+              top: 50%;
+              @include transformY;
+              color: #575f7a;
+              font-size: 24px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 30px;
+              height: 30px;
+              white-space: nowrap;
+              overflow: hidden;
+              cursor: pointer;
+              text-overflow: ellipsis;
+            }
+          }
+
+          &.checked {
+            background: #f8fafb;
+
+            &:after {
+              opacity: 1;
+            }
+
+            &:before {
+              background: #5881b3;
+              border: 2px solid #5881b3;
+            }
+
+            .litext {
+              color: #5881b3;
+              text-decoration: line-through;
+            }
+
+            .litext2 {
+              text-decoration: line-through;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+//////////////////////////
+// Checkbox
+//////////////////////////
+.input_check {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  @include transformY;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 3.75px;
+  @include transition;
+  border: 2px solid #c6c6c6;
+  background: $white;
+  left: 30px;
+}
+
+
+
+

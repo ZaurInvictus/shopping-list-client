@@ -1,0 +1,178 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 444;
+  animation: modal 0.2s linear;
+  overflow-y: auto;
+
+  &__inner {
+    position: absolute;
+    top: 23px;
+    left: 50%;
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    @include transformX;
+    box-shadow: 0 10px 10px -5px;
+    border: 1px solid rgb(190, 190, 190);
+    border-bottom: 4px solid #5881b3;
+
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px 50px;
+      border-bottom: 1px solid #e8ecf2;
+      background: #fafafa;
+      &-title {
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 600;
+        color: #5d6268;
+      }
+      &-close {
+        font-family: $font-icon;
+        font-size: 30px;
+        line-height: 1;
+        color: #5d6268;
+        cursor: pointer;
+      }
+    }
+    &-body {
+      padding: 40px 50px;
+      &-title {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #5d6268;
+        margin-bottom: 15px;
+        font-family: $font-secondary;
+      }
+    }
+    &-footer {
+      padding: 40px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      font-family: "Nunito", sans-serif;
+      &-close {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 600;
+        color: #3b414a;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      &-save {
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: #fff;
+        font-weight: 400;
+        background: #5881b3;
+        cursor: pointer;
+        @include transition;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      &-edit {
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: #fff;
+        font-weight: 400;
+        background: #5881b3;
+        cursor: pointer;
+        @include transition;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+@keyframes modal {
+  0% {
+    top: 50px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes modal {
+  0% {
+    top: 50px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+
+// REACT MODAL
+///////////////////////////////////////////////////////////////
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.6);
+}
+
+// ==========================================================================
+// DELETE CONFIRMATION POP-UP
+// =============================================================================
+.confirmation__pop-up {
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 5px;
+  padding: 40px;
+
+  @include xsm-sm {
+    max-width: 340px;
+    padding: 15px;
+  }
+}
+
+.confirmation__pop-up-text {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+
+.delete-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+
+.delete-text1 {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 6px;
+  @include transition;
+  pointer-events: none;  
+}
+
+.delete-text2 {
+    color: #7c7a7a;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 40px;
+    pointer-events: none;
+}
+
+.custom {
+  background-color: transparent;
+}

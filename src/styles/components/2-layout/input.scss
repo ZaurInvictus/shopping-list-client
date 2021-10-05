@@ -1,0 +1,76 @@
+.input {
+  &__outer {
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+    .tooltip {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      font-size: 14px;
+      line-height: 16px;
+      color: #5d6268;
+      font-family: $font-secondary;
+    }
+    input {
+      padding: 20px;
+      border: 1px solid #d7dfe8;
+      border-radius: 8px;
+      color: #5d6268;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 20px;
+      width: 100%;
+      box-sizing: border-box;
+      font-family: $font-secondary;
+      &::placeholder {
+        color: #9ea8b3;
+      }
+    }
+    textarea {
+      padding: 20px;
+      border: 1px solid #d7dfe8;
+      border-radius: 8px;
+      resize: none;
+      color: #5d6268;
+      width: 100%;
+      box-sizing: border-box;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 20px;
+      font-family: $font-secondary;
+      &::placeholder {
+        color: #9ea8b3;
+      }
+    }
+    select {
+      padding: 20px;
+      border: 1px solid #d7dfe8;
+      border-radius: 8px;
+      resize: none;
+      color: #5d6268;
+      width: 100%;
+      box-sizing: border-box;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 20px;
+      font-family: $font-secondary;
+      &::placeholder {
+        color: #9ea8b3;
+      }
+      option {
+        padding: 20px;
+        border: 1px solid #d7dfe8;
+        border-radius: 8px;
+        resize: none;
+        color: #5d6268;
+        width: 100%;
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 20px;
+        font-family: $font-secondary;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.alert-success {
+  font-size: 16px;
+  margin: 12px 0;
+  width: 100%;
+  padding: 8px 0;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+  background-color: #D4EDDA;
+}
+
+.alert-danger {
+  font-size: 16px;
+  margin: 12px 0;
+  width: 100%;
+  padding: 8px 0;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 100;
+  background-color: #F8D7DA;
+}
+/*# sourceMappingURL=alerts.css.map */

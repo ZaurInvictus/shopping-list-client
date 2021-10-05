@@ -24,10 +24,9 @@ import {
 export const getItems = () => async (dispatch) => {
   try {
     const res = await axios.get(process.env.REACT_APP_API_URL + "/api/items");
-    console.log("Items action res:", res);
+    res.data.sort((a, b) => a.id - b.id)
     dispatch({
       type: GET_ITEMS_SUCCESS,
-      // payload: res.data.results,
       payload: res.data
     });
   } catch (err) {
@@ -42,10 +41,7 @@ export const getItems = () => async (dispatch) => {
 // GET ITEM BY ID
 export const getItemById = (id) => async (dispatch) => {
   try {
-    const res = await axios.get(
-      process.env.REACT_APP_API_URL + `/api/items/${id}`
-    );
-    // console.log("result:", res);
+    const res = await axios.get(process.env.REACT_APP_API_URL + `/api/items/${id}`);
     dispatch({
       type: GET_ITEM_BY_ID_SUCCESS,
       payload: res.data,
@@ -60,7 +56,7 @@ export const getItemById = (id) => async (dispatch) => {
 
 
 // CREATE ITEM
-export const createItem = (formData) => async dispatch => {
+export const addItem = (formData) => async dispatch => {
   try {
     const res = await axios.post(process.env.REACT_APP_API_URL + '/api/items', formData)
     dispatch({
@@ -96,11 +92,12 @@ export const deleteItem = (id) => async dispatch => {
 // UPDATE ITEM 
 export const updateItem = item => async dispatch => {
   try {
-    const res = await axios.put(process.env.REACT_APP_API_URL + `/api/items/${item.id}`, item)
+    // const res = 
+    await axios.put(process.env.REACT_APP_API_URL + `/api/items/${item.id}`, item)
     
     dispatch({
       type: UPDATE_ITEM_SUCCESS,
-      payload: res.data
+      // payload: res.data
     })
     dispatch(setAlert('Item data successfully updated', 'success'))
   } catch(err) {

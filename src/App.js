@@ -4,16 +4,23 @@ import store from "./store/store";
 // COMPONENTS
 import NotFound from "./components/NotFound";
 // PAGES
-import Home from "./pages/Home";
+import Landing from "./pages/Landing";
+import AddItem from "./pages/AddItem";
+import Item from './pages/Item'
 
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-     test
-      </header>
-    </div>
+    <Provider store={store}>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route path='/add-item' component={AddItem} />
+          <Route path='/item/:id' component={Item} />
+          <Route component={NotFound} />
+        </Switch>
+      </Router>
+    </Provider>
   );
 }
 

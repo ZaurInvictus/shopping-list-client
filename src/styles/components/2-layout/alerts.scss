@@ -1,0 +1,27 @@
+// =============================================================================
+// ALERTS
+// =============================================================================
+.alert-success {
+    font-size: 16px;
+    margin: 12px 0;
+    width: 100%;
+    padding: 8px 0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    background-color: #D4EDDA;
+ }
+
+.alert-danger {
+    font-size: 16px;
+    margin: 12px 0;
+    width: 100%;
+    padding: 8px 0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    background-color: #F8D7DA;
+ }

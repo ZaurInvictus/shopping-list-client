@@ -1,11 +1,9 @@
 import { combineReducers } from 'redux'
 import alert from './alert'
-import allItems from './items'
-import oneItem from './item'
+import items from './items'
 
 
 export default combineReducers({
     alert,
-    allItems,
-    oneItem,
+    items,
 })
