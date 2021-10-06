@@ -1,28 +1,27 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 import { addItem } from "../store/actions/items";
 import FormErrors from "../components/FormErrors";
 import formValidations from "../utils/formValidations";
 
-
 const AddItem = ({ addItem }) => {
-  const [value, setValue] = useState(null)
+  const [value, setValue] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
     description: "",
     count: "",
   });
-  
+
   // Textarea characters counter
-  let length = value ? value.length: 0
+  let length = value ? value.length : 0;
   const history = useHistory();
 
   const [formErrors, setFormErrors] = useState({
     nameError: "",
     descriptionError: "",
-    countError: ""
+    countError: "",
   });
 
   const { nameError, descriptionError, countError } = formErrors;
@@ -30,8 +29,8 @@ const AddItem = ({ addItem }) => {
 
   const changeHandler = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    setValue(e.target.value)
-  }
+    setValue(e.target.value);
+  };
 
   const submitForm = (e) => {
     e.preventDefault();
@@ -55,14 +54,16 @@ const AddItem = ({ addItem }) => {
         <div className="modal__inner-header">
           <div className="modal__inner-header-title">SHOPPING LIST</div>
           <div className="modal__inner-header-close">
-            <span className="material-icons-outlined">
+            <Link to="/" className="material-icons-outlined link">
               last_page
-            </span>
+            </Link>
           </div>
         </div>
         <form className="form" onSubmit={submitForm}>
           <div className="modal__inner-body">
-            <div className="modal__inner-body-title">Add your new item below</div>
+            <div className="modal__inner-body-title">
+              Add your new item below
+            </div>
             <div className="input__outer">
               <FormErrors message={nameError} />
               <input
@@ -76,14 +77,12 @@ const AddItem = ({ addItem }) => {
               />
             </div>
             <div className="input__outer">
-              <div className="tooltip">
-              {length}/500
-              </div>
+              <div className="tooltip">{length}/500</div>
               <div className="input__section">
                 <FormErrors message={descriptionError} />
                 <textarea
                   className="input--text"
-                  type='text'
+                  type="text"
                   maxLength="500"
                   cols="30"
                   rows="4"
@@ -96,7 +95,7 @@ const AddItem = ({ addItem }) => {
               </div>
             </div>
             <div className="input__outer">
-            <FormErrors message={countError} />
+              <FormErrors message={countError} />
               <select
                 name="count"
                 className="input--text"

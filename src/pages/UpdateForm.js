@@ -42,9 +42,9 @@ const UpdateForm = (props) => {
           <div className="modal__inner-header">
             <div className="modal__inner-header-title">SHOPPING LIST</div>
             <div className="modal__inner-header-close">
-              <span className="material-icons-outlined">
-                last_page
-              </span>
+            <Link to='/' className="material-icons-outlined link">
+              last_page
+            </ Link>
             </div>
           </div>
           <form className="form" onSubmit={submitForm}>
