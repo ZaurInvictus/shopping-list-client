@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
+import PropTypes from 'prop-types';
 import { getItemById, updateItem } from "../store/actions/items";
 import UpdateForm from "./UpdateForm";
 import Spinner from "../components/Spinner";
@@ -27,6 +28,12 @@ const Item = ({
     </>
   );
 };
+
+Item.propTypes = {
+  getItemById: PropTypes.func.isRequired,
+  updateItem: PropTypes.func.isRequired,
+};
+
 
 const mapStateToProps = (state) => {
   return {

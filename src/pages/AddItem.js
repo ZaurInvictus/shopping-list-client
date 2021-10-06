@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
+import PropTypes from 'prop-types'
 import { addItem } from "../store/actions/items";
 import FormErrors from "../components/FormErrors";
 import formValidations from "../utils/formValidations";
@@ -121,6 +122,10 @@ const AddItem = ({ addItem }) => {
       </div>
     </div>
   );
+};
+
+AddItem.propTypes = {
+  addItem: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => {

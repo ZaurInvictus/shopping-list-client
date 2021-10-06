@@ -1,5 +1,6 @@
 import React, { useEffect, useCallback } from "react";
 import { connect } from "react-redux";
+import PropTypes from 'prop-types';
 import { getItems, deleteItem, updateItem } from "../store/actions/items";
 import { Link } from "react-router-dom";
 import Alert from "../components/Alert";
@@ -94,6 +95,13 @@ const Landing = ({
     </>
   );
 };
+
+Landing.propTypes = {
+  getItems: PropTypes.func.isRequired,
+  deleteItem: PropTypes.func.isRequired,
+  updateItem: PropTypes.func.isRequired,
+};
+
 
 const mapStateToProps = (state) => {
   return {

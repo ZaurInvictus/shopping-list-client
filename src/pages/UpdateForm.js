@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 
+
+
 const UpdateForm = (props) => {
   const [item, setItem] = useState(props.item);
   const [value, setValue] = useState(null);
   const history = useHistory();
+
 
   // Textarea characters counter
   let length = value ? value.length : 0;
@@ -112,5 +115,7 @@ const UpdateForm = (props) => {
     </>
   );
 };
+
+
 
 export default UpdateForm;
