@@ -206,6 +206,10 @@ li {
   cursor: pointer;
 }
 
+.modal__inner-header .link {
+  color: #5d6268;
+}
+
 .modal__inner-body {
   padding: 40px 50px;
 }
@@ -237,7 +241,7 @@ li {
   font-size: 16px;
   line-height: 20px;
   font-weight: 600;
-  color: red;
+  color: #3b414a;
   padding: 10px 20px;
   cursor: pointer;
 }

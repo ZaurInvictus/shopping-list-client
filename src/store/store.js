@@ -5,6 +5,7 @@ import rootReducer from './reducers'
 
 const initialState = {}
 
+// middleware that allows you to call the action creators
 const middleware = [thunk]
 
 const store = createStore(

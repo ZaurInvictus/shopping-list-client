@@ -1,13 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 
-
-
 const UpdateForm = (props) => {
   const [item, setItem] = useState(props.item);
   const [value, setValue] = useState(null);
   const history = useHistory();
-
 
   // Textarea characters counter
   let length = value ? value.length : 0;
@@ -42,9 +39,9 @@ const UpdateForm = (props) => {
           <div className="modal__inner-header">
             <div className="modal__inner-header-title">SHOPPING LIST</div>
             <div className="modal__inner-header-close">
-            <Link to='/' className="material-icons-outlined link">
-              last_page
-            </ Link>
+              <Link to="/" className="material-icons-outlined link">
+                last_page
+              </Link>
             </div>
           </div>
           <form className="form" onSubmit={submitForm}>
@@ -99,7 +96,11 @@ const UpdateForm = (props) => {
               </div>
 
               <div className="check">
-                <input type="checkbox" onClick={toggleIsPurchased} />
+                <input 
+                  type="checkbox" 
+                  onClick={toggleIsPurchased} 
+                  checked={item.isPurchased}
+                />
                 <label htmlFor="">Purchased</label>
               </div>
             </div>
@@ -115,7 +116,5 @@ const UpdateForm = (props) => {
     </>
   );
 };
-
-
 
 export default UpdateForm;
